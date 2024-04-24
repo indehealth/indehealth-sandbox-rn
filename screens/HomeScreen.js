@@ -1,10 +1,11 @@
 import { StatusBar, StyleSheet, Text, View } from "react-native";
+import { useLoginContext } from "../contexts/LoginContext";
 
 export const HomeScreen = () => {
+  const { user } = useLoginContext();
   return (
     <View style={styles.container}>
-      <Text>Home screen</Text>
-      <StatusBar style="auto" />
+      <Text>Hello, {user}</Text>
     </View>
   );
 };
